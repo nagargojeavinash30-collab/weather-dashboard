@@ -1,0 +1,121 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090f">
+  <meta name="description" content="A modern weather dashboard with forecasts and air quality information.">
+
+  <title>Atmosphere | Weather Dashboard</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- Header -->
+    <header class="topbar">
+      <a href="/" class="brand">
+        <span class="brand-icon">☁</span>
+        <span>Atmosphere</span>
+      </a>
+
+      <div class="topbar-right">
+        <span class="status-indicator"></span>
+        <span>Live Weather</span>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Welcome and Search Section -->
+      <section class="welcome-section">
+
+        <div>
+          <p class="eyebrow">WEATHER OVERVIEW</p>
+
+          <h1>
+            Explore the <span>atmosphere.</span>
+          </h1>
+
+          <p class="subtitle">
+            Real-time weather insights, forecasts and air quality.
+          </p>
+        </div>
+
+        <!-- City Search and Geolocation -->
+        <div class="search-container">
+
+          <input
+            type="text"
+            id="city-search"
+            placeholder="Search city..."
+            autocomplete="off"
+            aria-label="Search for a city"
+          >
+
+          <button id="search-btn" type="button">
+            Search
+          </button>
+
+          <button
+            id="location-btn"
+            type="button"
+            aria-label="Use my current location"
+          >
+            📍 Use My Location
+          </button>
+
+          <div
+            id="search-results"
+            class="search-results"
+          ></div>
+
+        </div>
+
+      </section>
+
+      <!-- Weather Dashboard Content -->
+      <section id="weather-content">
+
+        <div class="empty-state">
+          <div class="empty-icon">🌤️</div>
+
+          <h2>Discover your weather</h2>
+
+          <p>
+            Search for a city or use your current location
+            to explore weather conditions.
+          </p>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Atmosphere Weather Dashboard · Powered by Open-Meteo
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript -->
+  <script type="module" src="/js/app.js"></script>
+
+</body>
+</html>
+```
